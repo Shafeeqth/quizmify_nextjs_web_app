@@ -1,3 +1,7 @@
+import HistoryCard from "@/components/dashboard/HistoryCard";
+import HotTopicsCard from "@/components/dashboard/HotTopicsCard";
+import QuizMeCard from "@/components/dashboard/QuizMeCard";
+import RecentActivities from "@/components/dashboard/RecentActivities";
 import { getAuthSession } from "@/lib/nextAuth";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -22,6 +26,10 @@ const page = async (props: Props) => {
         <div className="grid gap-4 mt-4 md:grid-cols-2">
             <QuizMeCard/>
             <HistoryCard/>
+        </div>
+        <div className="grid gap-4 mt-4 md:grid-cols-2 lg:grid-cols-7">
+            <HotTopicsCard/>
+            <RecentActivities/>
         </div>
     </main>
 
